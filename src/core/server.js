@@ -1,9 +1,10 @@
 import express from 'express';
 import { Server } from 'ws';
+import config from '../сonfig';
 
 const path = require('path');
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || config.localPort;
 const INDEX = path.join(process.env.PWD, 'index.html');
 
 const server = express()
