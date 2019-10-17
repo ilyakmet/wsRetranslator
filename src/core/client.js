@@ -3,7 +3,7 @@ import server from './server';
 import config from '../сonfig';
 import start from '..';
 
-const address = (server.address().address === '::') ? config.locaWss : server.address().address;
+const address = (server.address().address === '::') ? config.localWss : server.address().address;
 
 const startConnection = () => {
   const ws = new WebSocket(config.demoserver);
