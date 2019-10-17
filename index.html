@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Retranslator</title>
+    <script>
+      'use strict'
+
+      var HOST = location.origin.replace(/^http/, 'ws')
+      const socket = new WebSocket(HOST);
+
+      socket.onopen = () => {
+        console.log('Connected');
+      };
+
+      socket.onclose = (event) => {
+        if (event.wasClean) {
+          console.log('Clean Disconnect');
+        } else {
+          console.log('Disconnected');
+        }
+        console.log(`Code: ${event.code} Reason: ${event.reason}`);
+      };
+
+      socket.onmessage = (event) => {
+        console.log(`Received Data ${event.data}`);
+      };
+
+      socket.onerror = (error) => {
+        console.log(`Error ${error.message}`);
+      };
+    </script>
+  </head>
+  <body>
+    Open DevTools Console
+  </body>
+</html>
