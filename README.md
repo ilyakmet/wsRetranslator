@@ -18,7 +18,7 @@ $ cd wsRetranslator
 $ bash install.sh
 ```
 
-### Run RSS Parser
+### Run Retranslator
 ```bash
 $ retranslator
 ```
