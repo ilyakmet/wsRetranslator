@@ -24,3 +24,7 @@ $ bash install.sh
 ```bash
 $ retranslator
 ```
+
+### Check 
+
+http://localhost:8080/
